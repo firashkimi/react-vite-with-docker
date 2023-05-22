@@ -1,6 +1,6 @@
-##Step By Step Guide To Dockerize React App Created Using Vite
+### Step By Step Guide To Dockerize React App Created Using Vite
 
-###What Is Docker ?
+### What Is Docker ?
 Docker is a tool that helps to create a common environment(called as Container in the docker world) for development, testing and production.
 
 Let's say you are developing a react app on your local environment(development)
@@ -13,12 +13,12 @@ So How can we ship the environment to all the places where ever you run the appl
 
 And here comes Docker, It will create a virtual environment for your app to run and you can create and use the environment where ever you need to run your app.
 
-#Step 1 Create React App Using Vite(Skip this step if you already have a react app)
+# Step 1 Create React App Using Vite(Skip this step if you already have a react app)
 
 ```
 npm create vite
 ```
-#Step 2: Update vite.config File
+# Step 2: Update vite.config File
 This step is required to map the port between Docker container and your React app
 
 Now replace this code snippet in vite.config
@@ -42,10 +42,10 @@ export default defineConfig({
     }
 })
 
-#Step 3: Create a Dockerfile
+# Step 3: Create a Dockerfile
 Create a file called Dockerfile in the root of your project directory like this
 
-#STep 4: Add Commands to Dockerfile
+# Step 4: Add Commands to Dockerfile
 
 ```
 FROM node
@@ -66,7 +66,7 @@ COPY . . - Copies the source code to /app directory
 EXPOSE 5173 - Exposes the port to access the app from outside the container i.e from the browser
 CMD ["npm", "run", "dev"] - Executes npm run dev to start the server
 
-#Step 5: Build the Dockerfile
+# Step 5: Build the Dockerfile
 In the terminal navigate to your project directory, then execute
 
 !! Remove the [ ] when executing
@@ -88,7 +88,7 @@ It will show the list of images available on your system
 
 Check whether the name of the image you have given when running the docker build command is available in the list.
 
-#Run the Docker Container
+# Run the Docker Container
 Execute this command in the terminal 👇
 
 !! Remove the [ ] when executing
