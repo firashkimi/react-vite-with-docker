@@ -70,9 +70,9 @@ CMD ["npm", "run", "dev"] - Executes npm run dev to start the server
 In the terminal navigate to your project directory, then execute
 
 !! Remove the [ ] when executing
-
+```
 docker build -t [any name] .
-
+```
 Flag used in the command
 
 -t - To tag the container (This will be your container name)
@@ -81,9 +81,9 @@ After the build completion, a docker image will be created.
 Docker Image is a template to run the container.
 
 To check your Docker Image, execute
-
+```
 docker images
-
+```
 It will show the list of images available on your system
 
 Check whether the name of the image you have given when running the docker build command is available in the list.
@@ -92,9 +92,9 @@ Check whether the name of the image you have given when running the docker build
 Execute this command in the terminal 👇
 
 !! Remove the [ ] when executing
-
+```
 docker run -d --rm -p 5173:5173 --name [name of the container] [your docker image name]
-
+```
 Flag used in the command
 
 -d - To run the container in the background (Detach Mode )
