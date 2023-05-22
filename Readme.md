@@ -41,7 +41,7 @@ export default defineConfig({
         port: 5173, //you can replace this port with any port 
     }
 })
-
+```
 # Step 3: Create a Dockerfile
 Create a file called Dockerfile in the root of your project directory like this
 
